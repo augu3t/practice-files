@@ -1,0 +1,182 @@
+/*
+====================
+Variables
+====================
+*/
+:root {
+    /* colors */
+    --light-gold: rgb(243, 178, 12);
+    --dark-gold: rgb(218, 165, 34);
+    --dark-orange: rgb(190, 126, 6);
+    --black-sd: rgba(0, 0, 0, 1);
+    --black-trans: rgba(0, 0, 0, 0.5);
+    --gray-text: rgb(83, 81, 81);
+    --gray-dark-bg: rgb(235, 227, 227);
+    --gray-light-bg: hsl(210, 36%, 96%);
+    --white: rgb(255, 255, 255);
+    /*others*/
+    --spacing-sm: 0.1rem;
+    --spacing-lg: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --border: 1px solid black;
+}
+
+/*
+====================
+Global styles
+====================
+*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.25;
+    font-size: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing-sm);
+    text-transform: capitalize;
+    line-height: 1.25;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+img {
+    width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}
+.btn {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1.05rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+}
+/*
+====================
+Custom styles
+====================
+*/
+body {
+    background: var(--gray-light-bg);
+}
+.container{
+    display: grid;
+    place-items: center;
+    margin: 70px 0;
+}
+
+.intro {
+    width: fit-content;
+    margin-bottom: 2.5rem;
+}
+.intro h1{
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: rgb(1, 1, 39);
+    letter-spacing: var(--spacing-lg);
+}
+.intro p {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    letter-spacing: var(--spacing-lg);
+}
+.intro button {
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    background: var(--dark-gold);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    letter-spacing: var(--spacing-lg);
+    color: var(--white);
+}
+.intro button:hover {
+    border: 2px solid transparent;
+    background: var(--dark-orange);
+}
+.intro input {
+    border: none;
+    background: var(--white);
+    outline: none;
+}
+
+.generator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.paragraphs {
+    width: 95%;
+    max-width: 800px;
+}
+.paragraphs p {
+    margin-bottom: 2rem;
+    word-spacing: var(--spacing-lg);
+    color: var(--gray-text);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+@media (min-width: 850px) {
+    .intro h1 {
+        font-size: 2.3rem;
+    }
+
+    .paragraphs p {
+        font-size: 1.3rem;
+    }
+}

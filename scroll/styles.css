@@ -1,0 +1,232 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.nav-container {
+    background: white;
+    padding: 15px 20px;
+}
+
+.nav-wrapper {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.logo {
+    height: 90%;
+}
+
+.nav-items {
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-items li {
+    list-style-type: none;
+    color: gray;
+    font-size: 1.3rem;
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+    padding: 12px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.intro {
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+        url(./hero-bcg.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.container {
+    /*background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7));*/
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+#home {
+    text-align: center;
+    color: whitesmoke;
+    width: 450px;
+}
+
+#home h1 {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    margin: 15px 0;
+}
+
+#home p {
+    padding: 0 50px;
+}
+
+#home a {
+    display: inline-block;
+    color: white;
+    border: 2px solid white;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 15px 0;
+    letter-spacing: 0.20rem;
+    transition: .5s;
+}
+
+#home a:hover {
+    background: #fff;
+    color: #02EDF0;
+}
+
+#about, #services, #tours {
+    background: aliceblue;
+    margin: auto;
+    padding: 0 0 500px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.20rem;
+    text-align: center;
+}
+
+#services {
+    background: #fff;
+}
+
+.head-text {
+    color: rgb(4, 167, 167);
+}
+
+footer {
+    padding: 80px 50px;
+    font-size: 1.1rem;
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+    text-align: center;
+    background: #034159;
+    color: #fff;
+}
+
+.navigator {
+    font-size: 2rem;
+    position: fixed;
+    top: 88vh;
+    right: 10%;
+    border-radius: 15px;
+    animation-name: enlarge;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: none;
+}
+
+.navigator a {
+    color: #02EDF0;
+}
+
+.show-arrow {
+    display: initial;
+}
+
+.show-nav {
+    height: auto;
+}
+
+
+
+@keyframes enlarge {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.7);}
+    100% {transform: scale(1);}
+}
+
+@media screen and (min-width: 700px) {
+    .hero {
+        background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+        url(./hero-bcg.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .nav-container, .intro {
+        background: transparent;
+        border: none;
+    }
+
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-wrapper {
+        padding: 0 60px;
+    }
+
+    .nav-items {
+        height: auto;
+        min-width: 40%;
+    }
+
+    .nav-items ul {
+        display: flex;
+        justify-content: space-evenly;
+        background: transparent;
+    }
+
+    .nav-items li {
+        color: #fff;
+    }
+
+    .nav-wrapper {
+        width: 50%;
+    }
+
+    .nav-container .nav {
+        display: none;
+    }
+
+    /*.nav-items {
+        height: 0;
+        overflow: hidden;
+    }*/
+    #home {
+        min-width: 600px;
+    }
+
+    #home h1 {
+        font-size: 3.5rem;
+    }
+    
+    #home p {
+        font-size: 1.2rem;
+    }
+}
+
+.fixed {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fixed li {
+    color: #000;
+    transition: .5s;
+}
+
+.fixed li:hover {
+    color: #02EDF0;
+}
+

@@ -1,0 +1,193 @@
+/*
+====================
+Variables
+====================
+*/
+:root {
+    /* colors */
+    --light-gold: rgb(243, 178, 12);
+    --dark-gold: rgb(218, 165, 34);
+    --dark-orange: rgb(190, 126, 6);
+    --black-sd: rgba(0, 0, 0, 1);
+    --black-trans: rgba(0, 0, 0, 0.5);
+    --gray-text: rgb(83, 81, 81);
+    --gray-dark-bg: rgb(235, 227, 227);
+    --gray-light-bg: hsl(210, 36%, 96%);
+    --white: rgb(255, 255, 255);
+    /*others*/
+    --spacing-sm: 0.1rem;
+    --spacing-lg: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --border: 1px solid black;
+}
+
+/*
+====================
+Global styles
+====================
+*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.25;
+    font-size: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing-sm);
+    text-transform: capitalize;
+    line-height: 1.25;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+img {
+    width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}
+.btn {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1.05rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+}
+/*
+====================
+Custom styles
+====================
+*/
+main {
+    background: rgb(44, 38, 38);
+    padding: 20px;
+}
+.bright {
+    background: white;
+}
+.container {
+    width: 95%;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px 5px;
+}
+
+.header {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    align-items: center;
+}
+.header-text{
+    letter-spacing: var(--spacing-lg);
+    font-size: 2.3rem;
+    width: 80%;
+    font-weight: lighter;
+    color: beige;
+}
+.bright .header-text {
+    color: black;
+}
+.toggle {
+    text-align: center;
+    width: 15%;
+}
+.contrast {
+    width: 40%;
+    font-size: 1.5rem;
+}
+.light {
+    display: none;
+}
+.dark {
+    display: initial;
+    color: pink;
+}
+.bright .dark {
+    display: none;
+}
+.bright .light {
+    display: initial;
+}
+
+.article {
+    margin-top: 50px;
+}
+.title {
+    font-size: 1.8rem;
+    color: pink;
+    margin-bottom: 5px;
+}
+.bright .title {
+    color: rgba(245, 58, 58, 0.979);
+}
+.time {
+    word-spacing: var(--spacing-sm);
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: rgb(194, 179, 179);
+}
+.bright .time {
+    color: var(--gray-text);
+}
+.paragraph {
+    font-size: 1rem;
+    color: beige;
+}
+.bright .paragraph {
+    color: rgb(53, 46, 46);
+}

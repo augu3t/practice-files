@@ -1,0 +1,157 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background: aliceblue;
+}
+
+.header {
+  margin: 3.75rem auto;
+  padding: 0.625rem 0;
+  margin-bottom: 3.125rem;
+  max-width: 480px;
+  text-align: center;
+}
+
+.title-wrap {
+  width: 100%;
+  margin-bottom: 1.875rem;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  color: rgb(2, 2, 62);
+  font-weight: 700;
+  position: relative;
+}
+
+.underline {
+  border: 2px solid rgb(248, 104, 52);
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 2px 6px;
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  border-color: rgb(250, 141, 101);
+  border-radius: 7px;
+  transition: .5s;
+}
+
+button:hover {
+  background: rgb(250, 141, 101);
+  color: rgb(255, 255, 255);
+}
+
+.menu-items {
+  width: 420px;
+  margin: 0px auto;
+}
+
+.meal {
+  margin-bottom: 1rem;
+}
+
+.img-wrap {
+  border: 2px solid rgb(250, 141, 101);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  margin-bottom: 0.625rem;
+  max-height: 210px;
+}
+
+img {
+  width: 100%;
+}
+
+.info-wrap {
+  padding: 0.3125rem 0.1875rem 0.3125rem 0;
+  border-bottom: 1px dotted rgb(71, 70, 70);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.meal-name {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  color: rgb(2, 2, 62);
+}
+
+.price {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  color: rgb(177, 52, 7);
+}
+
+.desc {
+  color: rgb(131, 126, 126);
+  text-align: center;
+}
+
+
+/* media queries*/
+@media screen and (min-width: 770px) {
+  .menu-items {
+    width: 650px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .meal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.625rem;
+  }
+
+  .aside {
+    grid-column: 2/4;
+  }
+
+  .info-wrap, .meal {
+    padding: 0;
+    
+  }
+  .img-wrap, img{
+    height: 100%;
+  }
+
+  .img-wrap {
+    height: 167px;
+  }
+
+  .desc {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.25rem;
+    width: 75rem;
+  }
+  
+  .img-wrap {
+    height: 142px;
+  }
+}
+
+

@@ -1,0 +1,127 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sevillana&display=swap');
+
+body {
+    background: aliceblue;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 95%;
+    margin: 70px auto;
+} 
+
+.header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.20rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(131, 127, 127);
+}
+
+.image {
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.tabs {
+    background: white;
+    border-radius: 10px;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-header h1 {
+    min-width: 33.3%;
+    text-align: center;
+    font-size: 0.99rem;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    padding: 12px 0;
+    font-weight: lighter;
+    background: rgb(222, 235, 241);
+    transition: 0.5s;
+}
+
+.tab-header h1:hover {
+    background: rgb(202, 215, 219);
+    color: rgb(108, 162, 243);
+    cursor: pointer;
+}
+
+.tab-content {
+    padding: 35px 15px;
+    font-size: 1rem;
+}
+
+.tab-content h4 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    letter-spacing: 0.25rem;
+}
+
+.tab-content p {
+    letter-spacing: 0.10rem;
+}
+
+.tab-header .focus {
+    background: #fff;
+}
+
+.tab-header .focus:hover {
+    background: #fff;
+    color: black;
+}
+
+@media screen and (min-width: 990px) {
+    .display {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tabs, .image {
+        width: 49%;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .image {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        width: 1170px;
+    }
+}

@@ -1,0 +1,214 @@
+/*
+====================
+Variables
+====================
+*/
+:root {
+    /* colors */
+    --light-gold: rgb(243, 178, 12);
+    --dark-gold: rgb(218, 165, 34);
+    --dark-orange: rgb(190, 126, 6);
+    --black-sd: rgba(0, 0, 0, 1);
+    --black-trans: rgba(0, 0, 0, 0.5);
+    --gray-text: rgb(83, 81, 81);
+    --gray-dark-bg: rgb(235, 227, 227);
+    --gray-light-bg: hsl(210, 36%, 96%);
+    --white: rgb(255, 255, 255);
+    /*others*/
+    --spacing-sm: 0.1rem;
+    --spacing-lg: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --border: 1px solid black;
+}
+
+/*
+====================
+Global styles
+====================
+*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.25;
+    font-size: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing-sm);
+    text-transform: capitalize;
+    line-height: 1.25;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+img {
+    width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}
+.btn {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1.05rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+}
+/*
+====================
+Custom styles
+====================
+*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+body {
+    background: var(--gray-light-bg);
+}
+main {
+    display: grid;
+    place-items: center;
+    background: var(--gray-light-bg);
+    margin-top: 100px;
+    text-transform: capitalize;
+}
+.container {
+    width: 90%;
+    max-width: 580px;
+    padding: 45px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--dark-shadow);
+}
+
+.list-input {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 19px;
+    padding: 0.5rem 0;
+}
+.list-input .header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(1, 1, 43);
+}
+.list-input .input {
+    display: flex;
+    background: var(--gray-light-bg);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.list-input .add-item {
+    width: 80%;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.list-input .add-item:focus {
+    border: 1px solid gray;
+}
+.list-input .btn {
+    width: 20%;
+    padding: 5PX;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    letter-spacing: var(--spacing-sm);
+    background: rgb(128, 201, 235);
+}
+.list-input .btn:hover {
+    color: var(--white);
+    background: rgb(8, 165, 238);
+}
+
+.list-item {
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.list-item:hover {
+    background: var(--gray-light-bg);
+}
+.list-item .item {
+    width: 85%;
+    letter-spacing: var(--spacing-sm);
+}
+.list-item .bi-class {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+.list-item .bi:hover {
+    cursor: pointer;
+    color: rgba(245, 7, 7, 0.856);
+}
+
+.clear {
+    display: none;
+    margin-top: 19px;
+    text-align: center;
+    letter-spacing: var(--spacing-lg);
+    font-size: 1.2rem;
+    color: rgba(245, 7, 7, 0.856);
+}
+
+.active .clear {
+    display: block;
+}
+
+.clear:hover {
+    cursor: pointer;
+    color: rgba(201, 6, 6, 0.856);
+}
